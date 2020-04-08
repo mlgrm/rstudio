@@ -21,7 +21,7 @@ RUN Rscript -e "update.packages(ask = FALSE)"
 RUN ln -s `which true` /usr/lib/rstudio-server/bin/timedatectl 
 RUN Rscript -e "devtools::install_github('tidyverse/googledrive')"
 RUN Rscript -e "devtools::install_github('tidyverse/googlesheets4')"
-RUN Rscript -e "devtools::install_github('tidyverts/tsibble')"
-RUN Rscript -e "devtools::install_github('tidyverts/fable')"
-RUN Rscript -e "devtools::install_github('tidyverts/feasts')"
+# RUN Rscript -e "devtools::install_github('tidyverts/tsibble')"
+# RUN Rscript -e "devtools::install_github('tidyverts/fable')"
+# RUN Rscript -e "devtools::install_github('tidyverts/feasts')"
 RUN install2.r -e reticulate RDS shinydashboard request plumber shinymanager r2d3
