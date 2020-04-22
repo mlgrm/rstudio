@@ -25,3 +25,4 @@ RUN Rscript -e "devtools::install_github('tidyverse/googlesheets4')"
 # RUN Rscript -e "devtools::install_github('tidyverts/fable')"
 # RUN Rscript -e "devtools::install_github('tidyverts/feasts')"
 RUN install2.r -e reticulate RDS shinydashboard request plumber shinymanager shinythemes ggplotify
+RUN install2.r -e plotly
