@@ -12,7 +12,8 @@ RUN apt-get update && \
 	python3-venv  \
 	python-dev  \
 	python3-dev \
-	curl
+	curl \
+	gettext-base
 
 # jailbreak and update R packages
 RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com'))" >> /etc/R/Rprofile.site
