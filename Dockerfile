@@ -1,6 +1,6 @@
-FROM rocker/rstudio
+FROM rocker/geospatial
 
-RUN export ADD=shiny &&  bash /etc/cont-init.d/add
+# RUN export ADD=shiny &&  bash /etc/cont-init.d/add
 
 RUN apt-get update && \
 	apt-get upgrade -y && \
