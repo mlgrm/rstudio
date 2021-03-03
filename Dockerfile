@@ -28,12 +28,12 @@ RUN Rscript -e "devtools::install_github('tidyverse/googlesheets4')"
 # RUN Rscript -e "devtools::install_github('tidyverts/feasts')"
 RUN install2.r -e reticulate RDS shinydashboard request plumber shinymanager shinythemes ggplotify
 RUN install2.r -e plotly
-
+RUN apt-get install -y ffmpeg
+RUN apt-get install -y grass
 # google cloud sdk
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | \
 	tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 RUN apt-get install -y apt-transport-https ca-certificates gnupg
-RUN apt-get install -y ffmpeg
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
 	apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 RUN apt-get update && apt-get install -y google-cloud-sdk
