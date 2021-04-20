@@ -41,3 +41,5 @@ RUN apt-get update && apt-get install -y google-cloud-sdk
 RUN apt-get update && apt-get install -y libsecret-1-dev
 
 RUN curl https://rclone.org/install.sh | bash
+
+RUN install2.r -e RODBC
