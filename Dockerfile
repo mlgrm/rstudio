@@ -43,3 +43,6 @@ RUN apt-get update && apt-get install -y libsecret-1-dev
 RUN curl https://rclone.org/install.sh | bash
 
 RUN install2.r -e RODBC
+
+RUN install2.r -e here fs
+RUN Rscript -e "devtools::install_github('erikor/timeR')"
