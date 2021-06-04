@@ -49,3 +49,5 @@ RUN Rscript -e "devtools::install_github('erikor/timeR')"
 
 RUN install2.r -e tidymodels
 RUN install2.r -e skimr
+
+RUN install2.r -e multidplyr
