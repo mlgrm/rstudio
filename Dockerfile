@@ -52,3 +52,4 @@ RUN install2.r -e skimr
 
 RUN install2.r -e multidplyr bench
 
+RUN install2.r -e gganimate gifski png
