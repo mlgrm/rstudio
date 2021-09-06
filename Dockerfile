@@ -52,4 +52,4 @@ RUN install2.r -e skimr
 
 RUN install2.r -e multidplyr bench tictoc
 
-RUN install2.r -e gganimate gifski png
+RUN install2.r -e gganimate gifski png ggforce
