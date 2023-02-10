@@ -20,7 +20,7 @@ RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com'))" >> /etc/R/Rprof
 RUN Rscript -e "update.packages(ask = FALSE)"
 
 # fake timedatectl to allow fable install
-RUN ln -s `which true` /usr/lib/rstudio-server/bin/timedatectl 
+# RUN ln -s `which true` /usr/lib/rstudio-server/bin/timedatectl 
 RUN Rscript -e "devtools::install_github('tidyverse/googledrive')"
 RUN Rscript -e "devtools::install_github('tidyverse/googlesheets4')"
 # RUN Rscript -e "devtools::install_github('tidyverts/tsibble')"
